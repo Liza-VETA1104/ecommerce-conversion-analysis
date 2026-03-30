@@ -20,7 +20,7 @@ Pandas: 320 MB → sessions_14days.csv
 
 - **Метрики:** views, made_purchase, день недели, категории, время
 
-### 1. [Предобработка](https://colab.research.google.com/drive/1exnIPxvRnjBP5eziwJDXq0DD3lW92D6T?authuser=1#scrollTo=jw788kZtGjUD)) ✅
+### 1. [Предобработка](https://colab.research.google.com/drive/1exnIPxvRnjBP5eziwJDXq0DD3lW92D6T?authuser=1#scrollTo=jw788kZtGjUD) 
 
 #### 🔧 Что сделано:
 
