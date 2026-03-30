@@ -4,17 +4,22 @@
 
 ## 📊 Данные
 - **Источник:** 2019-Oct.csv (5.28 GB)
-- **Подготовка:** 14 дней сессий → sessions_14days.csv
+- **Подготовка:**
+  5.3 GB сырых событий → Polars (lazy + streaming)
+ Фильтр: 14 дней + view/cart/purchase + price > 0
+ Парсинг: event_time → hour, weekday, is_weekend
+Агрегация по user_session:
+Дубли: 173 убрано (0.004%) — GA-шум
+Pandas: 320 MB → sessions_14days.csv
 - **Метрики:** views, made_purchase, день недели, категории, время
 
-| Этап | Действие | Результат |
-|------|----------|-----------|
-| **1** | `pl.scan_csv(1.3GB)` | Lazy загрузка |
-| **2** | `filter(14 дней)` | 18M → 4.16M |
-| **3** | `group_by(user_session)` | Views + purchases |
-| **4** | `drop_duplicates()` | -173 дубля |
-| **5** | `to_pandas()` | 320 MB готово |
+### 1. [Предобработка]([data_preprocessing.ipynb](https://colab.research.google.com/drive/1exnIPxvRnjBP5eziwJDXq0DD3lW92D6T?authuser=1#scrollTo=jw788kZtGjUD)) ✅
 
-https://colab.research.google.com/drive/1exnIPxvRnjBP5eziwJDXq0DD3lW92D6T?authuser=1#scrollTo=jw788kZtGjUD
+#### 🔧 Что сделано:
+
+
+
+
+
 
 ## 🎯 План анализа (7 гипотез)
