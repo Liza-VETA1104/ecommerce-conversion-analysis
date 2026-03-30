@@ -6,11 +6,11 @@
 - **Источник:** 2019-Oct.csv (5.28 GB)
 - **Подготовка:**
   
-  5.3 GB сырых событий → Polars (lazy + streaming)
+5.3 GB сырых событий → Polars (lazy + streaming)
   
- Фильтр: 14 дней + view/cart/purchase + price > 0
+Фильтр: 14 дней + view/cart/purchase + price > 0
  
- Парсинг: event_time → hour, weekday, is_weekend
+Парсинг: event_time → hour, weekday, is_weekend
  
 Агрегация по user_session:
 
